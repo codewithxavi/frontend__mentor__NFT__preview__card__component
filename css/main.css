@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #0d274e;
+  --main-shadow: #0d2245;
+  --main-bg-card: #153a6a;
+  --main-h4-color: #d6d8dc;
+  --main-p-color: #a5b6cf;
+  --main-eth-color: #22eeed;
+  --main-days-color: #7c98c0;
+  --main-creation-color: #8a9eb9;
+  --main-jules-color: #fff;
+  --main-hover-color: #17b5c0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat, "Helvetica Neue", Helvetica;
+  display: grid;
+  place-content: center;
+  background-color: var(--main-bg-color);
+}
+
+.main {
+  max-height: 600px;
+  width: 350px;
+  min-width: 320px;
+  box-shadow: 3px 3px 40px rgb(17, 33, 78);
+  border-radius: 1rem;
+  padding: 20px;
+  background: #082c52;
+  border-radius: 10px;
+
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  object-fit: cover;
+  /* max-height: 60%; */
+  border-radius: 10px;
+  filter: brightness(1.5);
+}
+
+.image-equilibrium {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 99%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: var(--main-hover-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  border-radius: 10px;
+}
+
+.container:hover .overlay {
+  opacity: .4;
+}
+
+.icon-view {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 99%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  border-radius: 10px;
+}
+
+.icon-view:hover {
+  opacity: 1;
+}
+
+img:hover {
+  background-color: var(--main-hover-color);
+}
+
+.article>h4 {
+  color: var(--main-h4-color);
+}
+
+.article>h4 a {
+  color: var(--main-h4-color);
+  text-decoration: none;
+}
+
+.article>h4 a:hover {
+  color: var(--main-hover-color);
+  transition: .5s;
+}
+
+.article>p {
+  color: var(--main-p-color)
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.content :first-child {
+  color: var(--main-eth-color);
+  font-weight: bold;
+  align-self: start;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.content :nth-child(2) {
+  color: var(--main-days-color);
+  font-weight: bold;
+  justify-self: end;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  border-top: 0.1px solid #fff;
+}
+
+.footer>img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  margin-right: 30px;
+}
+
+.footer>p {
+  color: var(--main-creation-color);
+}
+
+.footer span {
+  color: var(--main-jules-color);
+}
+
+.footer span a {
+  color: var(--main-jules-color);
+  text-decoration: none;
+}
+
+.footer span a:hover {
+  color: var(--main-hover-color);
+  transition: .5s;
+}
